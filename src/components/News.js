@@ -32,7 +32,7 @@ const News=(props)=> {
     }
     useEffect(() => {
         updateNews();
-        document.title = `${capitalizeFirstLetter(props.category)} - NewsMpnkey`;
+        document.title = `${capitalizeFirstLetter(props.category)} - NewsToday`;
     }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     const fetchMoreData = async () => {
@@ -46,7 +46,7 @@ const News=(props)=> {
 
         return (
             <>
-                <h1 className='text-center' style={{marginTop:'80px'}}>NewsMonkey - Top {capitalizeFirstLetter(props.category)} Headlines </h1>
+                <h1 className='text-center' style={{marginTop:'80px'}}>NewsToday - Top {capitalizeFirstLetter(props.category)} Headlines </h1>
                 {loading && <Spinner />}
                 <InfiniteScroll
                     dataLength={articles.length}
